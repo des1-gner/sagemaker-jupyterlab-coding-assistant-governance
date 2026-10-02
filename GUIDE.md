@@ -10,9 +10,9 @@ As of SageMaker Distribution (SMD) image version 4.1, JupyterLab in SageMaker St
 
 When the assistant runs, the space loads a set of SageMaker AI Skills (markdown guidance files) from a public AWS repository into the assistant's context, and these are stored in `.kiro/skills` and `.agent/skills` in the user's home directory [1][3]. On private JupyterLab spaces the following hidden directories and files are commonly created as part of this behaviour:
 
-- `.kiro` and `.agent` — the pre-configured agent and the SageMaker AI Skills (`.kiro/skills`, `.agent/skills`)
-- `.claude` — created when the Claude assistant is configured or used; `.claude/skills` is typically a set of symbolic links back into `.agent/skills`
-- `untitled.chat` — a chat file saved by the JupyterLab chat panel
+- `.kiro` and `.agent`: the pre-configured agent and the SageMaker AI Skills (`.kiro/skills`, `.agent/skills`)
+- `.claude`: created when the Claude assistant is configured or used; `.claude/skills` is typically a set of symbolic links back into `.agent/skills`
+- `untitled.chat`: a chat file saved by the JupyterLab chat panel
 
 These are expected artifacts of the feature, not an indication of compromise. The behaviour comes with the newer SMD image rather than from anything the user installs. Shared spaces have the chat extensions disabled in the image, so these artifacts are generally seen on private spaces.
 
@@ -80,15 +80,15 @@ There is no single one click Domain level toggle dedicated to this feature, whic
 
 ## References
 
-[1] Using a coding assistant to expedite your machine learning workflows — https://docs.aws.amazon.com/sagemaker/latest/dg/studio-updated-jl-coding-assistant.html
+[1] Using a coding assistant to expedite your machine learning workflows - https://docs.aws.amazon.com/sagemaker/latest/dg/studio-updated-jl-coding-assistant.html
 
-[2] AWS SageMaker Distribution (open source image build) — https://github.com/aws/sagemaker-distribution
+[2] AWS SageMaker Distribution (open source image build) - https://github.com/aws/sagemaker-distribution
 
-[3] AWSLabs agent-plugins, SageMaker AI Skills — https://github.com/awslabs/agent-plugins/tree/main/plugins/sagemaker-ai/skills
+[3] AWSLabs agent-plugins, SageMaker AI Skills - https://github.com/awslabs/agent-plugins/tree/main/plugins/sagemaker-ai/skills
 
-[4] Monitor model invocation using CloudWatch Logs and Amazon S3 — https://docs.aws.amazon.com/bedrock/latest/userguide/model-invocation-logging.html
+[4] Monitor model invocation using CloudWatch Logs and Amazon S3 - https://docs.aws.amazon.com/bedrock/latest/userguide/model-invocation-logging.html
 
-[5] Lifecycle configuration creation (JupyterLab) — https://docs.aws.amazon.com/sagemaker/latest/dg/jl-lcc-create.html
+[5] Lifecycle configuration creation (JupyterLab) - https://docs.aws.amazon.com/sagemaker/latest/dg/jl-lcc-create.html
 
 ---
 
